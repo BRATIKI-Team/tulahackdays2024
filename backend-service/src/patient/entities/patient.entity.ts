@@ -1,9 +1,9 @@
-import { UserType } from '@users/enums/user-type.enum';
 import { Document } from 'mongoose';
+import { Sign } from 'src/sign/entities/sign.entity';
 
-export interface User extends Document {
+export interface Patient extends Document {
   readonly tg_user_id: number;
-  readonly role: UserType;
   readonly firstname: string;
   readonly lastname: string;
+  readonly signs: Sign[];
 }
